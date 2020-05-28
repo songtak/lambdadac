@@ -1,8 +1,9 @@
-package com.lambda.web.entities;
+package com.lambda.web.movie;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MusicRepository extends JpaRepository<Music, Long> {
+public interface MovieRepository extends JpaRepository<Movie, Long> {
 }

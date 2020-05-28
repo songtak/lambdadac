@@ -1,4 +1,4 @@
-package com.lambda.web.entities;
+package com.lambda.web.music;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
