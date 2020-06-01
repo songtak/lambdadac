@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 
 
-@Entity(name="music") @Component
+@Entity @Component
 public class Music {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long musicNo;

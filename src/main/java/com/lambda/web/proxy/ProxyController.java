@@ -42,14 +42,9 @@ public class ProxyController{
         return null;
     }
 
-    @PostMapping("/navermovie")
-    public HashMap<String,Object> navermovie(@RequestBody String searchWord){
-        pxy.print("넘어온 키워드: "+searchWord);
-        box.clear();
-        if(movieRepository.count() ==0) crawler.naverMovie();
-        List<Movie> list = movieRepository.findAll();
-        box.put("list", list);
-        box.put("count", list.size());
-        return box.get();
+    @GetMapping("/naver-movie/{searchWord}")
+    public void naverMovie(@PathVariable String searchWord) {
+        pxy.print("넘어온 키워드: " + searchWord);
+        crawler.naverMovie();
     }
 }
